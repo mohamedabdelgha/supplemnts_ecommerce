@@ -51,3 +51,36 @@
     cardsCon.addEventListener( 'scroll', infiniteScroll );
     cardsWraper.addEventListener( 'mouseenter', ()=>{clearTimeout(timeoutId);} );
     cardsWraper.addEventListener( 'mouseleave', autoPlay );
+//--------------------- menubar functions ---------------------------------------//
+const menubtn = document.getElementById('menubtn');
+const menubtnI = document.querySelector('#menubtn i');
+const menubar = document.querySelector('aside');
+menubtn.addEventListener('click',function(){
+    menubar.classList.toggle('active')
+    menubtnI.classList.toggle('rotate')
+})
+
+//--------------------- onload functions ---------------------------------------//
+window.onload=()=>{
+    filters[0].classList.add('selected');
+}
+//--------------------- scroll functions ---------------------------------------//
+window.onscroll=()=>{
+    console.log(scrollY)
+    if(scrollY>0){
+        document.querySelector('header').style.position='fixed'
+        document.querySelector('header').style.top='0'
+    }else{
+        document.querySelector('header').style.position='relative'
+    }
+}
+//--------------------- filters functions ---------------------------------------//
+const filters = document.querySelectorAll('.filters span');
+for(let i=0;i<filters.length;i++){
+    filters[i].addEventListener('click', function(){
+        filters.forEach(filter=>{
+            filter.classList.remove('selected');
+        })
+        this.classList.add('selected');
+    })
+}

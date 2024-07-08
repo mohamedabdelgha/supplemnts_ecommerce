@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -5,6 +6,7 @@
     transition: 0.2s ease;
     user-select: none;
     perspective: initial;
+    font-family: 'Poppins', sans-serif;
 }
 :root{
     --main-color:#306FEF;
@@ -41,12 +43,27 @@ body{
     border-radius: 30px;
     border: 2px solid var(--main-color);
 }
+aside{
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 18%;
+    right: 0;
+    background-color: #FFFFFF;
+    z-index: 30;
+}
+aside.active{
+    width: 20%;
+    animation: showcoontent4 0.2s ease-in-out  0.2s 1 forwards;
+}
 header{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 2222;
+    background-color: #FFFFFF;
 }
 header .top{
     background-color: var(--black-color);
@@ -68,7 +85,7 @@ header .top span{
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 15px;
 }
 header .top span i{margin-right: 10px;}
 header .top span:nth-child(2){
@@ -123,6 +140,21 @@ header .sec-top ul li a{
     text-decoration: none;
     font-size: 25px;
     color: var(--black-color);
+    position: relative;
+}
+header .sec-top ul li a .number{
+    position: absolute;
+    top: 0;
+    background-color: var(--red-color);
+    font-size: 15px;
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
+#menubtn i.rotate{
+    transform: rotate(180deg);
 }
 header .sec-top ul li a:hover{
     color: var(--black3-color);
@@ -156,11 +188,11 @@ header .sec-top ul li a:hover{
     align-items: start;
     flex-direction: column;
     color: var(--black-color);
-    gap: 10%;
+    gap: 5%;
     
 }
 .sec1 .sec-right h3{
-    font-size: 30px;
+    font-size: 25px;
     margin-left: 20px;
     opacity: 0;
     animation: showcoontent1 0.6s ease-in-out  0.6s 1 forwards;
@@ -171,7 +203,7 @@ header .sec-top ul li a:hover{
 .sec1 .sec-right p{
     width: 70%;
     margin-left: 20px;
-    font-size: 18px;
+    font-size: 15px;
     opacity: 0;
     animation: showcoontent1 0.6s ease-in-out  0.6s 1 forwards;
 }
@@ -214,13 +246,13 @@ header .sec-top ul li a:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 7%;
+    gap: 5%;
     position: relative;
 }
 .sec1 .sec-left h3{
     position: absolute;
     right: -40%;
-    font-size: 30px;
+    font-size: 25px;
     transform: rotate(270deg);
     color: var(--sec-color);
     z-index: 19;
@@ -228,7 +260,7 @@ header .sec-top ul li a:hover{
 .sec1 .sec-left p{
     width: 60%;
     color: var(--white-color);
-    font-size: 18px;    
+    font-size: 15px;    
     opacity: 0;
     animation: showcoontent1 1s ease-in-out  0.6s 1 forwards;
 }
@@ -343,7 +375,7 @@ header .sec-top ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 20px;
     border-radius: 50%;
     background-color: var(--main-color);
     color: var(--white4-color);
@@ -355,7 +387,7 @@ header .sec-top ul li a:hover{
 .sec2 .most-selling-con .pro-cards .pro-card .img-con .shadow-con .buttons a.cart{
     background-color: var(--white4-color);
     color: var(--main-color);
-    font-size: 25px;
+    font-size: 20px;
 }
 .sec2 .most-selling-con .pro-cards .pro-card .img-con .shadow-con .buttons a.cart:hover{
     color: var(--white4-color);
@@ -373,12 +405,12 @@ header .sec-top ul li a:hover{
 }
 .sec2 .most-selling-con .pro-cards .pro-card .details-con h3{
     color: var(--black-color);
-    font-size: 20px;
+    font-size: 18px;
 }
 .sec2 .most-selling-con .pro-cards .pro-card .details-con p{
-    font-size: 15px;
+    font-size: 12px;
 }
-.sec2 .most-selling-con .pro-cards .pro-card .details-con .rev{font-size: 12px; padding: 10px;}
+.sec2 .most-selling-con .pro-cards .pro-card .details-con .rev{font-size: 12px; padding: 5px;}
 .sec2 .most-selling-con .pro-cards .pro-card .details-con .prev{font-size: 15px; text-decoration: line-through;color: var(--black3-color);}
 .sec2 .most-selling-con .pro-cards .pro-card .details-con .price{font-size: 20px; color: var(--main-color);}
 .sec3{
@@ -416,7 +448,7 @@ header .sec-top ul li a:hover{
     position: absolute;
     bottom: 15%;
     left: 5%;
-    font-size: 40px;
+    font-size: 30px;
     color: var(--white4-color);
 }
 .sec4{flex-direction: column;height: 80vh;}
@@ -490,7 +522,7 @@ header .sec-top ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 20px;
     border-radius: 50%;
     background-color: var(--main-color);
     color: var(--white4-color);
@@ -502,7 +534,7 @@ header .sec-top ul li a:hover{
 .sec4 .selling-con .pro-cards .pro-card .img-con .shadow-con .buttons a.cart{
     background-color: var(--white4-color);
     color: var(--main-color);
-    font-size: 25px;
+    font-size: 20px;
 }
 .sec4 .selling-con .pro-cards .pro-card .img-con .shadow-con .buttons a.cart:hover{
     color: var(--white4-color);
@@ -523,9 +555,9 @@ header .sec-top ul li a:hover{
     font-size: 20px;
 }
 .sec4 .selling-con .pro-cards .pro-card .details-con p{
-    font-size: 15px;
+    font-size: 12px;
 }
-.sec4 .selling-con .pro-cards .pro-card .details-con .rev{font-size: 12px; padding: 10px;}
+.sec4 .selling-con .pro-cards .pro-card .details-con .rev{font-size: 12px; padding: 5px;}
 .sec4 .selling-con .pro-cards .pro-card .details-con .prev{font-size: 15px; text-decoration: line-through;color: var(--black3-color);}
 .sec4 .selling-con .pro-cards .pro-card .details-con .price{font-size: 20px; color: var(--main-color);}
 .sec4 .filters{
@@ -541,7 +573,7 @@ header .sec-top ul li a:hover{
     width: 20%;
     margin: 5px 20px;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px;
     color: var(--black-color);
     cursor: pointer;
@@ -556,7 +588,7 @@ header .sec-top ul li a:hover{
 .pro-card .sold{
     width: 40%;
     text-align: center;
-    padding:10px 5px ;
+    padding: 5px ;
     background-color: var(--red-color);
     color: var(--white4-color);
     font-size: 20px;
@@ -631,12 +663,12 @@ header .sec-top ul li a:hover{
 }
 .sec4 .first-why .con2end{align-items: center;}
 .sec4 .first-why .con1st h2{
-    font-size: 30px;
-    margin-left: 15%;
+    font-size: 25px;
+    margin-left: 10%;
 }
 .sec4 .first-why .con1st p{
-    font-size: 18px;
-    margin-left: 15%;
+    font-size: 15px;
+    margin-left: 10%;
     width: 80%;
 }
 .sec4 .first-why .con2end img{ width: 100%;}
@@ -710,7 +742,7 @@ header .sec-top ul li a:hover{
     color: var(--black-color);
 }
 .sec5 .contact-con h3{
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 .sec5 .contact-con p{
@@ -773,7 +805,7 @@ header .sec-top ul li a:hover{
 }
 .sec5 .floating-con h3{
     text-transform: capitalize;
-    font-size: 40px;
+    font-size: 30px;
 }
 .sec5 .floating-con ul{
     list-style:circle;
@@ -782,7 +814,7 @@ header .sec-top ul li a:hover{
 .sec5 .floating-con ul li{
     width: 100%;
     margin: 10% 0;
-    font-size: 30px;
+    font-size: 25px;
 }
 .sec5 .left .links{
     position: absolute;
@@ -810,7 +842,7 @@ header .sec-top ul li a:hover{
     justify-content: center;
     align-items: center;
     color: var(--white4-color);
-    font-size: 30px;
+    font-size: 25px;
 }
 .footer .sec span i{
     font-size: 60px;
@@ -843,7 +875,7 @@ header .sec-top ul li a:hover{
 .footer .sec ul li{
     width: 100%;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .footer .sec ul li div{width: 100%;}
 .footer .sec ul li div input{
@@ -860,14 +892,14 @@ header .sec-top ul li a:hover{
     border: none;
     outline: none;
     height: 50px;
-    font-size: 18px;
+    font-size: 15px;
     border-radius: 10px;
     color: var(--white4-color);
     background-color: var(--main-color);
     cursor: pointer;
 }
 .footer .sec ul .head{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
 }
 .footer .third{
@@ -890,7 +922,6 @@ header .sec-top ul li a:hover{
     width: fit-content;
     position: relative;
     z-index: 1;
-    border-radius: 20px;
     margin-top: 20px;
     opacity: 0;
     animation: showcoontent2 0.6s ease-in-out  0.6s 1 forwards;
@@ -933,9 +964,9 @@ header .sec-top ul li a:hover{
     }
     100% {
     left: 0;
-    border-radius: 20px 0 0 20px;
     width: 50%;
     height: 100%;
+    border-radius: 0;
     }
 }
 @keyframes right-move {
@@ -946,7 +977,7 @@ header .sec-top ul li a:hover{
     }
     100% {
     right: 0;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0;
     width: 50%;
     height: 100%;
     }
@@ -994,3 +1025,103 @@ header .sec-top ul li a:hover{
         filter: blur(0px);
     }
 }
+@keyframes showcoontent4 {
+    from{
+        transform: translate(100px,0);
+    }to{
+        transform: translate(0,0);
+    }
+}
+@media ( max-width:1200px) {
+    .footer .sec ul li div button{
+        font-size: 12px;
+    }
+    .footer .sec ul li{
+        font-size:15px ;
+    }
+}
+@media (max-width:800px) {
+    header .top span{
+        width: 40%;
+    }
+    header .sec-top img{width: 40%;}
+    header .sec-top .search-con{width: 40%;}
+    header .sec-top .search-con i{display: none;}
+    header .sec-top ul li{
+        display: none;
+    }
+    aside.active{width: 55%;top: 15%;}
+    header .sec-top ul #menubtn{display: inline;}
+    .section.sec1 .first-img{display: none;}
+    .section.sec1{flex-direction: column;}
+    .sec1 .sec-right,.sec1 .sec-left{
+        width: 100%;
+        min-height: 50%;
+        max-height:fit-content ;
+        gap: 1%;
+    }
+    .sec1 .sec-right h3{font-size: 18px;margin-left: 10px;}
+    .sec1 .sec-right p{width:95%; height: 65%; overflow: auto; font-size: 12px;margin-left: 10px;}
+    .sec1 .sec-right p::-webkit-scrollbar{width: 0;
+    display: none;}
+    .sec1 .sec-right .shopbtn{
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px 0;
+    }
+    .sec1 .sec-right .links{
+        margin-left:10px ;
+        width: 60%;
+    }
+    .sec1 .sec-right .links span{font-size:15px ;}
+    .sec1 .sec-left h3{
+        font-size: 14px;
+    }
+    .sec1 .sec-left p{
+        width: 85%;
+        font-size: 12px;
+        font-weight: 200;
+    }
+    .sec2 .poster{display: none;}
+    .sec2 .most-selling-con{height: 100% ;}
+    .sec2 .most-selling-con .pro-cards{height: 100% ;}
+    .sec2 .most-selling-con .pro-cards .pro-card{
+        width: 100%;
+        height: 60%;
+    }
+    .sec2 .most-selling-con .pro-cards .pro-card .img-con{height: 60%;}
+    .sec3 {overflow: auto;}
+    .sec3::-webkit-scrollbar {width: 0;display: none;}
+    .sec3 .column{width: 100%;}
+    .sec4 .selling-con{height: 100%;}
+    .sec4 .selling-con .pro-cards{height: 100%;}
+    .sec4 .selling-con .pro-cards .pro-card{width: 100%; height: 90%;}
+    .sec4 .selling-con .pro-cards .pro-card .img-con{ height: 60%;}
+    .sec4 .filters{width: 100%;height: fit-content;}
+    .sec4 .filters span{width: 40%;font-size: 12px;font-weight: 600;}
+    .offerscontainer{display: none;}
+    .sec4 .first-why .con1st {width: 100%;height: 100%;}
+    .sec4 .first-why .con2end{display: none;}
+    .sec4 .first-why .con1st h2{font-size: 20px;}
+    .sec4 .first-why .con1st p{font-size: 15px; width: 80%;}
+    .sec4 .second-why .bg-image{display: none;}
+    .sec4 .second-why .cards .card{
+        width: 25%;
+        height: 30%;
+        background-color: var(--sec-color);
+    }
+    .sec4 .second-why .cards .card span{font-size: 30px; color: var(--white4-color);}
+    .sec5 .floating-con{
+        display: none;
+    }
+    .sec5{height: 70vh;}
+    .sec5 .contact-con p {width: 90%;}
+    .sec5 .contact-con .inputs {width: 90%;}
+    .sec5 .contact-con .inputs input,.sec5 .contact-con .inputs button{
+        width: 100%;
+    }
+    .footer .sec::-webkit-scrollbar{width: 0;display: none;}
+    .footer .sec{min-height: 100%;margin: 10px; overflow: auto;}
+    .footer .sec ul{width: 60%;}
+}   
