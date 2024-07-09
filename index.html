@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Home page</title>
 </head>
 <body>
@@ -20,9 +20,9 @@
                 <input type="text" placeholder="search...">
             </div>
             <ul>
-                <li><a href="#"><i class="fa-regular fa-circle-user"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> <span class="number">1</span></a></li>
-                <li><a href="#"><i class="fa-regular fa-heart"></i> <span class="number">1</span></a></li>
+                <li><a id="user-account"><i class="fa-regular fa-circle-user"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> <span class="number">1</span></a></li>
+                <li><a href="wishlist.html"><i class="fa-regular fa-heart"></i> <span class="number">1</span></a></li>
                 <li id="menubtn"><a href="#"><i class="fa-solid fa-caret-left"></i></a></li>
             </ul>
         </nav>
@@ -30,6 +30,63 @@
     <aside>
 
     </aside>
+    <div class="window" id="log-window">
+        <div class="window-con">
+            <div class="right">
+                <i class="fa-solid fa-xmark" id="close-window"></i>
+                <ul>
+                    <li>LOG IN</li>
+                    <li>SIGN UP</li>
+                </ul>
+            </div>
+            <div class="left login">
+                <img src="images/logo.png" alt="">
+                <div class="inputs">
+                    <input id="log-email" type="text" placeholder="email">
+                    <input id="log-pass" type="password" placeholder="password">
+                    <button id="log-btn">LOG IN</button>
+                    <p>____________ OR ____________</p>
+                    <div class="apis">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i> facebook</a>
+                        <a href="#"><i class="fa-brands fa-google"></i> google</a>
+                    </div>
+                </div>
+            </div>
+            <div class="left signup">
+                <img src="images/logo.png" alt="">
+                <div class="inputs">
+                    <input id="sign-fname" type="text" placeholder="first name">
+                    <input id="sign-lname" type="text" placeholder="last name">
+                    <input id="sign-email" type="text" placeholder="email">
+                    <input id="sign-pass" type="password" placeholder="password">
+                    <input id="sign-confirm-pass" type="password" placeholder="confirm password">
+                    <button id="sign-btn">SIGN UP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="window" id="pro-window">
+        <div class="window-con">
+            <div class="pro-image">
+                <i class="fa-solid fa-xmark" id="pro-close"></i>
+                <img src="images/IMG_20230422_012221_579.png" alt="">
+            </div>
+            <div class="pro-details">
+                <h2>PRODUCT CARD</h2>
+                <h3>Product Name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod architecto doloremque autem exercitationem voluptate consectetur.</p>
+                <div class="flavors">
+                    <h4>flavor1</h4>
+                    <h4>flavor2</h4>
+                </div>
+                <div class="prices">
+                    <span class="prev">1500</span>
+                    <span class="current">1500</span>
+                </div>
+                <button>show more</button>
+            </div>
+        </div>
+    </div>
     <section class="section sec1">
         <img class="first-img" src="images/charles-gaudreault-xXofYCc3hqc-unsplash-removebg-preview 1.png" alt="">
         <div class="sec-right">
@@ -44,7 +101,7 @@
                 Regardless of your individual health requirements, we strive to meet them by offering a wide range of diverse nutritional supplements. 
                 Whether you are looking to boost energy and vitality, build muscle, strengthen your immune system, or improve digestion, we have the perfect product for you.
             </p>
-            <a href="#" class="shopbtn">shop now</a>
+            <a href="#products-con" class="shopbtn">shop now</a>
             <div class="links">
                 <span>follow us :</span>
                 <i class="fa-brands fa-instagram"></i>
@@ -62,8 +119,8 @@
                 Explore our wide range of nutritional supplements and get the support you need to achieve your health goals.
             </p>
             <div class="signbtns">
-                <a href="#"><i class="fa-solid fa-l"></i></a>
-                <a href="#"><i class="fa-solid fa-s"></i></a>
+                <a id="login-btn"><i class="fa-solid fa-l"></i></a>
+                <a id="signup-btn"><i class="fa-solid fa-s"></i></a>
             </div>
         </div>
     </section>
@@ -296,7 +353,7 @@
             </div>
         </div>
     </section>
-    <section class="section sec4">
+    <section class="section sec4" id="products-con">
         <div class="selling-con">
             <div class="filters">
                 <span>whey protein</span>
@@ -492,6 +549,8 @@
             <p>@2022 company,all rights reserved. </p>
         </div>
     </section>
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/filters.js"></script>
+    <script src="/js/procards.js"></script>
 </body>
 </html>
