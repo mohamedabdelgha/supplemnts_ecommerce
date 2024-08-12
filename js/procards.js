@@ -1,7 +1,7 @@
 //--------------------- product-window functions ---------------------------------------//
 const pro_window = document.getElementById('pro-window');
 const pro_close = document.getElementById('pro-close');
-const pro_cards = document.querySelectorAll('.pro-card');
+const pro_cards = document.querySelectorAll('.pro-card .details-con');
 pro_cards.forEach(card=>{
     card.addEventListener('click',function(){
         pro_window.style.display='flex';
